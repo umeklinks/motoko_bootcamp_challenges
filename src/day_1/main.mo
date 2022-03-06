@@ -1,5 +1,6 @@
 import Array "mo:base/Array";
 import Nat "mo:base/Nat";
+import Iter "mo:base/Iter";
 
 actor {
   // public func greet(name : Text) : async Text {
@@ -103,7 +104,7 @@ actor {
     // *** CHALLENGE 8
     // Write a function maximum that takes an array of natural numbers and returns the maximum value in the array. This function will returns 0 if the array is empty.
     // let max_array : [var Nat] = [var ];
-    public query func maximum( max_array : [Nat] ) : async Nat {
+    public func maximum( max_array : [Nat] ) : async Nat {
       if( max_array.size() != 0) {
         return max_array.size();
       } else {
@@ -112,8 +113,21 @@ actor {
       
     };
 
-  // ************ Challenge 9 & 10 still progress *********************
+// ************************************************
 
+  // *** CHALLENGE 9
+  // Implement a function selection_sort that takes an array of natural numbers and returns the sorted array 
+  // let xs : [var Nat] = [4, 2, 6, 1, 5];
+  public func remove_from_array(array : [Nat], n : Nat) : async [Nat] {
+        let array_filter = func(nx : Nat) : Bool {
+            if( nx == n ) {
+                return false
+            } else {
+                return true
+            }
+        } ;
+        return ( Array.filter(array, array_filter));
+    }
     
 
 
