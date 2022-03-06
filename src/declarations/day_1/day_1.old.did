@@ -1,0 +1,14 @@
+service : {
+  add: (nat, nat) -> (nat);
+  add_to_array: (vec nat, nat) -> (vec nat);
+  clear_counter: () -> (nat);
+  days_to_second: (nat) -> (nat);
+  divide: (nat, nat) -> (bool);
+  getCounter: () -> (nat) query;
+  increment_counter: () -> (nat);
+  is_even: (nat) -> (bool);
+  maximum: (vec nat) -> (nat) query;
+  setCounter: (nat) -> ();
+  square: (nat) -> (nat);
+  sum_of_array: (vec nat) -> (nat);
+}
