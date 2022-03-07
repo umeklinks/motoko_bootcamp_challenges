@@ -101,7 +101,7 @@ actor {
 
   // ************************************************
 
-    // *** CHALLENGE 8
+    // *** CHALLENGE 8 ***
     // Write a function maximum that takes an array of natural numbers and returns the maximum value in the array. This function will returns 0 if the array is empty.
     // let max_array : [var Nat] = [var ];
     public func maximum( max_array : [Nat] ) : async Nat {
@@ -115,7 +115,7 @@ actor {
 
 // ************************************************
 
-  // *** CHALLENGE 9
+  // *** CHALLENGE 9 ***
   // Implement a function selection_sort that takes an array of natural numbers and returns the sorted array 
   // let xs : [var Nat] = [4, 2, 6, 1, 5];
   public func remove_from_array(array : [Nat], n : Nat) : async [Nat] {
@@ -127,8 +127,41 @@ actor {
             }
         } ;
         return ( Array.filter(array, array_filter));
-    }
+    };
+
+// ************************************************
     
-  // *** CHALLENGE 10 in progress
+  // *** CHALLENGE 10 ***
+  // Implement a function selection_sort that takes an array of natural numbers and returns the sorted array 
+  public func selection_sort(main_array : [Nat]) : async [Nat] {
+        if (main_array.size() <= 1) {
+            return main_array;
+        };
+
+        var array_to_sort : [var Nat] = Array.thaw(main_array);
+        
+        var second_array_size = main_array.size() - 2;
+        var first_array_size = main_array.size() -1;
+        
+        for( i in Iter.range( 0, second_array_size)) {
+            // getting index
+            var min_index = i;
+            for( j in Iter.range( i + 1, first_array_size)) {
+                if( array_to_sort[j] < array_to_sort[min_index]) {
+                    min_index := j;
+                };
+            };
+
+            if( min_index != i ) {
+                
+                let temp_array = array_to_sort[i];
+
+                array_to_sort[i] := array_to_sort[min_index];
+                array_to_sort[min_index] := temp_array;
+
+            };
+        };
+        return Array.freeze(array_to_sort);
+    };
 
 };
