@@ -12,6 +12,9 @@ actor {
     // Write a function nat_to_nat8 that converts a Nat n to a Nat8. 
     // Make sure that your function never trap.
     public func nat_to_nat8( n : Nat) : async Nat8 {
+        if( n > 255 ) {
+            return 0;
+        };
         var m : Nat8 = 0;
         m := Nat8.fromNat(n);
         return m;
