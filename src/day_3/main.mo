@@ -1,6 +1,9 @@
 import Array "mo:base/Array";
-import ArrayFromPrivateSwap "mo:base/Array";
-import Iter "mo:base/Iter";
+import ArrayBase "mo:base/Array";
+import IterBase "mo:base/Iter";
+import NatBase "mo:base/Nat";
+import Nat "mo:base/Nat";
+import Option "mo:base/Option";
 
 actor {
     // *** Challenge 1 : ***
