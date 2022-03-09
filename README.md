@@ -1,6 +1,11 @@
-# day_1
+# Motoko Daily Challenge
 
-Welcome to your new day_1 project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+Welcome to your my Motoko Daily Challenge project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+
+There are daily projects of 10 challenges each. They are as follows:
+
+- [Day 1](https://github.com/umeklinks/motoko_bootcamp_challenges/tree/master/src/day_1/main.mo)
+- [Day 2](https://github.com/umeklinks/motoko_bootcamp_challenges/blob/master/src/day_2/main.mo)
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
 
