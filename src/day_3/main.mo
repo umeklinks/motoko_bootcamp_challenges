@@ -1,18 +1,21 @@
 import Array "mo:base/Array";
-import ArrayFromPrivateSwap "mo:base/Array";
+import ArrayBase "mo:base/Array";
 import Iter "mo:base/Iter";
+import NatBase "mo:base/Nat";
+import Nat "mo:base/Nat";
+import Option "mo:base/Option";
 
 actor {
     // *** Challenge 1 : ***
     // This is a pub func that calls private func swap
     public func getSwap(array : [Nat], i: Nat, j: Nat) : async [Nat] {
-        return ArrayFromPrivateSwap.freeze(_swap(ArrayFromPrivateSwap.thaw(array), i, j));
+        return ArrayFromPrivateSwap.freeze(swap(ArrayFromPrivateSwap.thaw(array), i, j));
     };
 
     /** Write a private function swap that takes 3 parameters : a mutable array , 
     an index j and an index i and returns the same array but where value at 
     index i and index j have been swapped. **/
-    private func _swap(my_array : [var Nat], i: Nat, j: Nat) : [var Nat] {
+    private func swap(my_array : [var Nat], i: Nat, j: Nat) : [var Nat] {
         let array_idx = my_array[i];
         my_array[i] := my_array[j];
         my_array[j] := array_idx;

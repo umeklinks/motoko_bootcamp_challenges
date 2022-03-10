@@ -6,6 +6,9 @@ There are daily projects of 10 challenges each. They are as follows:
 
 - [Day 1](https://github.com/umeklinks/motoko_bootcamp_challenges/tree/master/src/day_1/main.mo)
 - [Day 2](https://github.com/umeklinks/motoko_bootcamp_challenges/blob/master/src/day_2/main.mo)
+- [Day 3](https://github.com/umeklinks/motoko_bootcamp_challenges/blob/master/src/day_3/main.mo)
+
+
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
 
